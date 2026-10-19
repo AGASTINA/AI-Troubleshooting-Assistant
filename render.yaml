@@ -3,7 +3,7 @@ services:
     name: fixflow-troubleshooting-assistant
     runtime: python
     plan: free
-    buildCommand: pip install -r backend/requirements.txt && npm ci --prefix frontend && npm run build --prefix frontend
+    buildCommand: pip install -r backend/requirements.txt && npm install --prefix frontend && npm run build --prefix frontend
     startCommand: gunicorn --chdir backend app:app --bind 0.0.0.0:$PORT
     healthCheckPath: /api/health
     envVars:
