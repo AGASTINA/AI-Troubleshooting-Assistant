@@ -189,13 +189,4 @@ git init
 git add .
 git commit -m "Build rule-based AI troubleshooting assistant"
 ```
-
-Create an empty repository on GitHub, then follow GitHub's instructions to add the remote and push the code.
-
-## Resume-ready description (after you run and test it)
-
-**AI Troubleshooting Assistant | React, Flask, Python, REST API**
-- Built a rule-based support chatbot that classifies common network, login, performance, application, and printer issues and returns structured troubleshooting steps.
-- Developed and validated REST endpoints with input validation and automated pytest coverage for normal, invalid, and unsupported requests.
-
-Only claim tests passed or deployment completed after you have actually run those steps. The rules and test coverage are a starter; extend them with more scenarios as you learn.
+LIVE LINK : https://fixflow-troubleshooting-assistant.onrender.com/
