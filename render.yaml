@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fixflow-troubleshooting-assistant
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt && npm ci --prefix frontend && npm run build --prefix frontend
+    startCommand: gunicorn --chdir backend app:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: AI_API_BASE_URL
+        value: https://api.openai.com/v1
+      - key: AI_MODEL
+        value: gpt-4.1-mini
